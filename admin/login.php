@@ -7,10 +7,10 @@ if(!$dbconn) {
 	$user = pg_query($dbconn, "SELECT * FROM users");
 	$user = pg_fetch_object($user);
 	
-	$user->nick;
-	$user->pass;
+	$user->nick . '<br>';
+	$user->pass . '<br><br>';
 	
-	echo $_POST["user"];
+	echo $_POST["user"] . '<br>';
 	echo sha1($_POST["pass"]);
 	/*if($user->nick != $_POST["user"] || $user->pass != sha1($_POST["pass"])) {
 		echo 'spatny uzivatel nebo heslo';
