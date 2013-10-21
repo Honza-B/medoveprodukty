@@ -2,6 +2,8 @@
 require_once 'src/db.handle.php';
 
 $conn = new Conn();
+
+$conn;
 /*
 <style type="text/css">
     
