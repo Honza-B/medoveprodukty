@@ -11,10 +11,10 @@ if(!$dbconn) {
 	$user = pg_fetch_object($user);
 
 	if($user->nick != $nick || $user->pass != $pass) {
-		echo 'spatny uzivatel nebo heslo';
-	} else {
-		$_SESSION['User'] = serialize($user);
-		header("Location: http://medoveprodukty.herokuapp.com/admin/index.php");
+		echo 'Wrong user or password';
 	}
+	
+	$_SESSION['User'] = serialize($user);
+	header("Location: http://medoveprodukty.herokuapp.com/admin/index.php");
 }
 ?>

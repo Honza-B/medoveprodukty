@@ -7,7 +7,7 @@ if(isset($_SESSION["User"])) {
 			User<br>
 			<input type="text" name="user">
 			Password<br>
-			<input type="text" name="pass">
+			<input type="password" name="pass">
 			<input type="submit" value="Login">			
 		</form>
 	';
