@@ -1,21 +1,7 @@
 <?php
-$dbconn = pg_connect("host=ec2-54-225-102-116.compute-1.amazonaws.com port=5432 dbname=dqc3ovvf3iq5n user=zpypggkdwxounx password=mNNTRvw5iCagVG9UapUgzJmRze sslmode=require options='--client_encoding=UTF8'") or die('Could not connect: ' . pg_last_error());
+require_once 'src/db.handle.php';
 
-if(!$dbconn) {
-echo 'neni spojeni';
-} else {
-	echo '<form action="index.php" method="post">
-    Nick<br>
-    <input type="text" name="nick"><br>
-    <input type="submit" value="Save!">
-</form>';
-	$getAll = pg_query($dbconn, "SELECT * FROM nick ORDER BY id");
-	
-	while ($data = pg_fetch_object($getAll)) {
-		echo $data->id . "je me id a ";
-		echo $data->name . " je muj nick";
-	}
-}
+$conn = new Conn();
 /*
 <style type="text/css">
     
