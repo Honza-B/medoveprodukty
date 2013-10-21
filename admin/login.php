@@ -11,7 +11,7 @@ if(!$dbconn) {
 		echo 'spatny uzivatel nebo heslo';
 	} else {
 		$_SESSION['User'] = serialize($user);
-		header("Location: http://medoveprodukty.herokuapp.com/admin/login.php");
+		header("Location: http://medoveprodukty.herokuapp.com/admin/index.php");
 	}
 }
 ?>
