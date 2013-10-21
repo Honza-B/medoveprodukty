@@ -1,9 +1,7 @@
 <?php
 require_once 'src/db.handle.php';
 
-$conn = new Conn();
-
-$conn->LoadAll();
+$con = Conn::LoadAll();
 /*
 <style type="text/css">
     
