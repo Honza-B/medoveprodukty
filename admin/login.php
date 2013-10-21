@@ -6,12 +6,17 @@ if(!$dbconn) {
 } else {
 	$user = pg_query($dbconn, "SELECT * FROM users");
 	$user = pg_fetch_object($user);
-
-	if($user->nick != $_POST["user"] || $user->pass != sha1($_POST["pass"])) {
+	
+	$user->nick;
+	$user->pass;
+	
+	echo $_POST["user"];
+	echo sha1($_POST["pass"]);
+	/*if($user->nick != $_POST["user"] || $user->pass != sha1($_POST["pass"])) {
 		echo 'spatny uzivatel nebo heslo';
 	} else {
 		$_SESSION['User'] = serialize($user);
 		header("Location: http://medoveprodukty.herokuapp.com/admin/index.php");
-	}
+	}*/
 }
 ?>
