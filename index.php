@@ -1,8 +1,9 @@
 <?php
 $dbconn = pg_connect("host=ec2-54-225-102-116.compute-1.amazonaws.com port=5432 dbname=dqc3ovvf3iq5n user=zpypggkdwxounx password=mNNTRvw5iCagVG9UapUgzJmRze sslmode=require options='--client_encoding=UTF8'") or die('Could not connect: ' . pg_last_error());
 
-if(!$this->dbconn) 
-			echo 'neni spojeni';
+if(!$this->dbconn) {
+	echo 'neni spojeni';
+}
 
 $nick = pg_query($dbconn, "SELECT * FROM nick ORDER BY id");
 
