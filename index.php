@@ -9,6 +9,12 @@ echo 'neni spojeni';
     <input type="text" name="nick"><br>
     <input type="submit" value="Save!">
 </form>';
+	$getAll = pg_query($dbconn, "SELECT * FROM nick ORDER BY id");
+	
+	while ($data = pg_fetch_object($getAll)) {
+		echo $data->id . "je me id a ";
+		echo $data->name . " je muj nick";
+	}
 }
 /*
 <style type="text/css">
