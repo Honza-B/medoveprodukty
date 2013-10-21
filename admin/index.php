@@ -1,6 +1,6 @@
 <?php
 if(isset($_SESSION["User"])) {
-	
+	echo 'nekdo je prihlasen';
 } else {
 	echo '
 		<form action="login.php" method="post">
