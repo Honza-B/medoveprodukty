@@ -3,7 +3,7 @@ require_once 'src/db.handle.php';
 
 $conn = new Conn();
 
-$conn;
+$conn->__construct();
 /*
 <style type="text/css">
     
