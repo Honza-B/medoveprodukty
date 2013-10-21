@@ -3,13 +3,13 @@ $dbconn = pg_connect("host=ec2-54-225-102-116.compute-1.amazonaws.com port=5432 
 
 if(!$this->dbconn) {
 	echo 'neni spojeni';
-}
-
-$nick = pg_query($dbconn, "SELECT * FROM nick ORDER BY id");
-
-while ($data = pg_fetch_object($nick)) {
-  echo $data->id . " je me id a";
-  echo $data->name . " je muj nick\n";
+} else {
+	$nick = pg_query($dbconn, "SELECT * FROM nick ORDER BY id");
+	
+	while ($data = pg_fetch_object($nick)) {
+	  echo $data->id . " je me id a";
+	  echo $data->name . " je muj nick\n";
+	}
 }
 /*
 <style type="text/css">
