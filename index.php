@@ -7,13 +7,14 @@ if(!$dbconn) {
 	$nick = pg_query($dbconn, "SELECT * FROM nick ORDER BY id");
 	
 	while ($data = pg_fetch_object($nick)) {
-	  echo $data->id . " je me id a";
+	  echo $data->id . " je me id a ";
 	  echo $data->name . " je muj nick<br>";
 	}
 	
 	echo 'vocode';
 }
-/*
+?>
+
 <style type="text/css">
     
 </style>
@@ -30,5 +31,4 @@ if(!$dbconn) {
     <div id="slider">
         <div class="item"></div>
     </div>
-</div>*/
-?>
+</div>
