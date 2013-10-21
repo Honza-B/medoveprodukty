@@ -2,6 +2,10 @@
 require_once 'src/db.handle.php';
 
 $con = Conn::LoadAll();
+while ($data = pg_fetch_object($con)) {
+  echo $data->id;
+  echo $data->name;
+}
 /*
 <style type="text/css">
     
