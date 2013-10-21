@@ -8,7 +8,7 @@ if(!$dbconn) {
 	
 	while ($data = pg_fetch_object($nick)) {
 	  echo $data->id . " je me id a";
-	  echo $data->name . " je muj nick\n";
+	  echo $data->name . " je muj nick<br>";
 	}
 	
 	echo 'vocode';
