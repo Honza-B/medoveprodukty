@@ -10,6 +10,8 @@ if(!$this->dbconn) {
 	  echo $data->id . " je me id a";
 	  echo $data->name . " je muj nick\n";
 	}
+	
+	echo 'vocode';
 }
 /*
 <style type="text/css">
