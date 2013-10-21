@@ -1,8 +1,9 @@
 <?php
 require_once 'src/db.handle.php';
 
-$con = Conn::LoadAll();
-while ($data = pg_fetch_object($con)) {
+$Con = new Conn();
+$Nick = $Con->LoadAll();
+while ($data = pg_fetch_object($Nick)) {
   echo $data->id;
   echo $data->name;
 }
