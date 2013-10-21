@@ -5,10 +5,11 @@ if(isset($_SESSION["User"])) {
 	echo '
 		<form action="login.php" method="post">
 			User<br>
-			<input type="text" name="user">
+			<input type="text" name="user"><br>
 			Password<br>
-			<input type="password" name="pass">
+			<input type="password" name="pass"><br>
 			<input type="submit" value="Login">			
 		</form>
 	';
 }
+?>
