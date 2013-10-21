@@ -10,8 +10,8 @@ if(!$dbconn) {
 	$user->nick . '<br>';
 	$user->pass . '<br><br>';
 	
-	echo $_POST["user"] . '<br>';
-	echo sha1($_POST["pass"]);
+	echo $_POST[user] . '<br>';
+	echo sha1($_POST[pass]);
 	/*if($user->nick != $_POST["user"] || $user->pass != sha1($_POST["pass"])) {
 		echo 'spatny uzivatel nebo heslo';
 	} else {
