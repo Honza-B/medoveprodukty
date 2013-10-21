@@ -1,22 +1,6 @@
-<?php
-$dbconn = pg_connect("host=ec2-54-225-102-116.compute-1.amazonaws.com port=5432 dbname=dqc3ovvf3iq5n user=zpypggkdwxounx password=mNNTRvw5iCagVG9UapUgzJmRze sslmode=require options='--client_encoding=UTF8'") or die('Could not connect: ' . pg_last_error());
-
-if(!$dbconn) {
-	echo 'neni spojeni';
-} else {
-	$nick = pg_query($dbconn, "SELECT * FROM nick ORDER BY id");
-	
-	while ($data = pg_fetch_object($nick)) {
-	  echo $data->id . " je me id a ";
-	  echo $data->name . " je muj nick<br>";
-	}
-	
-	echo 'vocode';
-}
-?>
-
 <style type="text/css">
-    
+    #wireframe {width: 810px;}
+    #foo-link {width: 100%; text-align: right;}
 </style>
 <div id="wireframe">
     <div id="view">
@@ -31,4 +15,5 @@ if(!$dbconn) {
     <div id="slider">
         <div class="item"></div>
     </div>
+    <div id="foo-link"><a href="">Login</a></div>
 </div>
