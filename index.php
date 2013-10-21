@@ -15,5 +15,5 @@
     <div id="slider">
         <div class="item"></div>
     </div>
-    <div id="foo-link"><a href="">Login</a></div>
+    <div id="foo-link"><a href="admin/index.php">Login</a></div>
 </div>
