@@ -25,7 +25,7 @@
     	while($data = pg_fetch_object($objProduct)) {
     		echo '
     			<div class="item" id="'.$data->id.'">
-    				<img src="'.trim($data->path).'" title="'.trim($data->title).'" class="carousel">
+    				<img src="'.trim($data->path).'" title="'.trim($data->title).'" description="'.trim($data->description).'" class="carousel">
     			</div>
     		';
     	}
