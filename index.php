@@ -35,6 +35,13 @@
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script>
 	$(document).ready(function(){
+		var title = $('.carousel:first-child').attr('title');
+		var path = $('.carousel:first-child').attr('src');
+		var description = $('.carousel:first-child').attr('description');
+		$('.view').attr('src',path);
+		$('#title').text(title);
+		$('#description').text(description);
+		
 		$('.carousel').click(function(){
 			var title = $(this).attr('title');
 			var path = $(this).attr('src');
