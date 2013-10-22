@@ -43,6 +43,7 @@
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script>
 	$(document).ready(function(){
+		$('.carousel:first-child').attr('class','selected');
 		var title = $('.carousel:first-child').attr('title');
 		var path = $('.carousel:first-child').attr('src');
 		var description = $('.carousel:first-child').attr('description');
