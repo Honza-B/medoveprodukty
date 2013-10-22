@@ -12,12 +12,15 @@ if(!$dbconn) {
 	$num = pg_num_rows($objUser);
 	$objUser = pg_fetch_object($objUser);
 	
+	$dbnick = substr($objUser->nick, 0, -1);
+	$dbpass = substr($objUser->pass, 0, -1);
+	
 	echo $nick.'<br>';
 	echo $pass.'<br><br>';
 	
-	echo $objUser->nick;
+	echo $dbnick;
 	echo '<br>';
-	echo $objUser->pass;
+	echo $dbpass;
 	
 if($num==0) {
     echo 'Nic se nenactlo';
