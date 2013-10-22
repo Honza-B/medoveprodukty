@@ -20,10 +20,15 @@ if(isset($_SESSION["User"])) {
 	';
 	
 	while($data = pg_fetch_object($objProduct)) {
-		echo $data->id.'<br>';
-		echo $data->title.'<br>';
-		echo $data->path.'<br>';
-		echo $data->description.'<br><br>';
+		echo '
+			<tr>
+				<td>'.$data->id.'</td>
+				<td>'.$data->title.'</td>
+				<td>'.$data->path.'</td>
+				<td>'.$data->description.'</td>
+				<td><button to-id="'.$data->id.'" value="edit"><button to-id="'.$data->id.'" value="delete"></td>
+			</tr>
+			';
 	}
 	
 	echo '</table>';
