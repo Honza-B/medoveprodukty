@@ -13,10 +13,10 @@ if(!$dbconn) {
 
 	if($objUser->nick != $nick || $objUser->pass != $pass) {
 		$_SESSION['logMsg'] = 'Wrong user or password';
-		header('Location: admin/index.php');
+		header('Location: index.php');
 	} else {
 		$_SESSION['User'] = serialize($objUser);
-		header('Location: admin/index.php');
+		header('Location: index.php');
 	}
 }
 ?>
