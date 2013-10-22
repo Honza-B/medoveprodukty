@@ -23,4 +23,6 @@ table.product-list tr:nth-child(odd) {
 .carousel {
 	width: 60px;
 	height: 60px;
+	display: inline;
+	padding-right: 10px;
 }
