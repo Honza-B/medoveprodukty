@@ -27,3 +27,9 @@ table.product-list tr:nth-child(odd) {
 	display: inline;
 	padding-right: 10px;
 }
+
+#foo-link a:visited,
+#foo-link a:active,
+#foo-link a:hover {
+	color: #00A;
+}
