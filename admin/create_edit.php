@@ -13,7 +13,7 @@
 		$view = pg_escape_string($_POST["view"]);
 		$desc = pg_escape_string($_POST["desc"]);
 
-		$insert = pg_query("INSERT INTO product (title, path, description) VALUES('{$title}','{$view}','{$desc}')");
+		$insert = pg_query($dbconn,"INSERT INTO product (title, path, description) VALUES('$title','$view','$desc')");
 		if(!$insert) {
 			echo 'fuck';
 		}
