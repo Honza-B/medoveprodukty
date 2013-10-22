@@ -8,7 +8,7 @@ $pass = sha1($_POST["pass"]);
 if(!$dbconn) {
 	echo 'Not connected to database';
 } else {
-	$objUser = pg_query($dbconn, "SELECT * FROM users WHERE nick='$nick' and pass='$nick'");
+	$objUser = pg_query($dbconn, "SELECT * FROM users WHERE nick='$nick' and pass='$pass'");
 	$num = pg_num_rows($objUser);
 	$objUser = pg_fetch_object($objUser);
 	
