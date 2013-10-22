@@ -29,7 +29,9 @@ table.product-list tr:nth-child(odd) {
 }
 
 #slider {
+	border: 1px #66D solid;
 	margin-bottom: 20px;
+	padding: 10px;
 }
 
 #foo-link {
@@ -55,5 +57,5 @@ table.product-list tr:nth-child(odd) {
 #foo-link a:visited,
 #foo-link a:active,
 #foo-link a:hover {
-	color: #00A;
+	color: #66D;
 }
