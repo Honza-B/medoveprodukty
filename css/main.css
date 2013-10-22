@@ -15,3 +15,7 @@ table.product-list tr:nth-child(odd) {
 	width: 100%;
 	text-align: right;
 }
+
+.tools {
+	display: inline;
+}
