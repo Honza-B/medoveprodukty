@@ -10,13 +10,18 @@ if(!$dbconn) {
 } else {
 	$objUser = pg_query($dbconn, "SELECT * FROM users");
 	$objUser = pg_fetch_object($objUser);
+	$num = pg_num_rows($objUser);
+	
+if($num==0) {
+    echo 'Nic se nenactlo';
+}
 
 	if($objUser->nick != $nick || $objUser->pass != $pass) {
-		$_SESSION['logMsg'] = 'Wrong user or password';
-		header('Location: index.php');
+		$_SESSION['logMsg'] .= 'Wrong user or password';
+		//header('Location: index.php');
 	} else {
 		$_SESSION['User'] = serialize($objUser);
-		header('Location: index.php');
+		//header('Location: index.php');
 	}
 }
 ?>
