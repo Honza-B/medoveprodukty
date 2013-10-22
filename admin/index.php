@@ -45,7 +45,7 @@
 						<input type="submit" value="Edit" name="'.$data->id.'">
 					</form>
 					<form action="delete.php">
-						<input type="submit" value="Edit" name="'.$data->id.'">
+						<input type="submit" value="Delete" name="'.$data->id.'">
 					</form>
 				</td>
 			</tr>
