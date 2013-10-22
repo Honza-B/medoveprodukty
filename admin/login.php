@@ -12,6 +12,12 @@ if(!$dbconn) {
 	$num = pg_num_rows($objUser);
 	$objUser = pg_fetch_object($objUser);
 	
+	echo $nick.'<br>';
+	echo $pass.'<br><br>';
+	
+	echo $objUser->nick.'<br>';
+	echo $objUser->pass;
+	
 if($num==0) {
     echo 'Nic se nenactlo';
 }
@@ -25,7 +31,5 @@ if($num==0) {
 	}
 	
 	echo $_SESSION['logMsg'];
-	echo $_SESSION['User']->nick.'<br>';
-	echo $_SESSION['User']->pass;
 }
 ?>
