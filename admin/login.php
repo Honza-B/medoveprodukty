@@ -28,7 +28,7 @@ if($num==0) {
     echo 'Nic se nenactlo';
 }
 
-	if($dbnick == $nick && $dbpass == $pass) {
+	if(trim($objUser->nick) == $nick && trim($objUser->pass) == $pass) {
 		$_SESSION['logMsg'] .= 'it could be right<br>';
 		//header('Location: index.php');
 	} else {
