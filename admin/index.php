@@ -20,7 +20,7 @@ if(isset($_SESSION["User"])) {
 	while($objProduct = pg_fetch_object($objProduct)) {
 		echo '
 			<tr>
-				<td'.$objProduct->id.'</td>
+				<td>'.$objProduct->id.'</td>
 				<td>'.$objProduct->title.'</td>
 				<td>'.$objProduct->path.'</td>
 				<td>'.$objProduct->description.'</td>
