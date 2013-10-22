@@ -42,10 +42,10 @@
 				<td>'.$data->path.'</td>
 				<td>'.$data->description.'</td>
 				<td><div class="tools">
-						<form action="update.php">
+						<form action="update.php?id='.$data->id.'">
 							<input type="submit" value="Edit" name="'.$data->id.'">
 						</form>
-						<form action="delete.php">
+						<form action="delete.php?id='.$data->id.'">
 							<input type="submit" value="Delete" name="'.$data->id.'">
 						</form>
 					</div>
