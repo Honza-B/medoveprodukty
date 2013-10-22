@@ -12,6 +12,14 @@ table.product-list tr:nth-child(odd) {
 	border: 1px #DDD solid;
 }
 
+#title {
+	font-size: x-large;
+}
+
+#image {
+	text-align: center;
+}
+
 #foo-link {
 	width: 100%;
 	text-align: right;
