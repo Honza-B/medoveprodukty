@@ -8,20 +8,24 @@ $pass = sha1($_POST["pass"]);
 if(!$dbconn) {
 	echo 'Not connected to database';
 } else {
-	$objUser = pg_query($dbconn, "SELECT * FROM users");
-	$objUser = pg_fetch_object($objUser);
+	$objUser = pg_query($dbconn, "SELECT * FROM users WHERE nick='$nick' and pass='$nick'");
 	$num = pg_num_rows($objUser);
+	$objUser = pg_fetch_object($objUser);
 	
 if($num==0) {
     echo 'Nic se nenactlo';
 }
 
 	if($objUser->nick != $nick || $objUser->pass != $pass) {
-		$_SESSION['logMsg'] .= 'Wrong user or password';
+		$_SESSION['logMsg'] .= 'Wrong user or password<br>';
 		//header('Location: index.php');
 	} else {
 		$_SESSION['User'] = serialize($objUser);
 		//header('Location: index.php');
 	}
+	
+	echo $_SESSION['logMsg'];
+	echo $_SESSION['User']->nick.'<br>';
+	echo $_SESSION['User']->pass;
 }
 ?>
