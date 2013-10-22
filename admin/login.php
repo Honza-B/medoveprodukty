@@ -18,7 +18,6 @@ if(!$dbconn) {
 	}
 
 	if(trim($objUser->nick) == $nick && trim($objUser->pass) == $pass) {
-		$_SESSION["logMsg"] .= 'it could be right<br>';
 		$_SESSION["User"] = serialize($objUser);
 		header('Location: index.php');
 	} else {

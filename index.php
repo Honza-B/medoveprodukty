@@ -49,6 +49,15 @@
 		$('.view').attr('src',path);
 		$('#title').text(title);
 		$('#description').text(description);
+
+		$('#next').click(function(){
+			var title = $('.carousel:first-child').next().attr('title');
+			var path = $('.carousel:first-child').next().attr('src');
+			var description = $(this).next().attr('description');
+			$('.view').attr('src',path);
+			$('#title').text(title);
+			$('#description').text(description);
+		});
 		
 		$('.carousel').click(function(){
 			var title = $(this).attr('title');
