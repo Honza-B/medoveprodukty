@@ -42,12 +42,12 @@
 				<td>'.$data->path.'</td>
 				<td>'.$data->description.'</td>
 				<td><div class="tools">
-						<form action="update.php?id='.$data->id.'">
-							<input type="submit" value="Edit" name="'.$data->id.'">
-						</form>
-						<form action="delete.php?id='.$data->id.'">
-							<input type="submit" value="Delete" name="'.$data->id.'">
-						</form>
+						<a href="update.php?id='.$data->id.'">
+							<img src="edit.png" alt="Edit" />
+						</a>
+						<a href="delete.php?id='.$data->id.'">
+							<img src="delete.png" alt="Delete" />
+						</a>
 					</div>
 				</td>
 			</tr>
