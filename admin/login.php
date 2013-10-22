@@ -16,6 +16,9 @@ if(!$dbconn) {
 		echo 'Wrong user or password';
 	}
 		$_SESSION['User'] = serialize($objUser);
-		header("Location: http://medoveprodukty.herokuapp.com/admin/index.php");
+if(isset($_SESSION["User"])) {
+	echo 'nekdo je prihlasen';
+}
+		//header("Location: http://medoveprodukty.herokuapp.com/admin/index.php");
 }
 ?>
