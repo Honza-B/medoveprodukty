@@ -16,17 +16,18 @@ if(!$dbconn) {
 	echo $pass.'<br><br>';
 	
 	echo $objUser->nick.'<br>';
-	echo $objUser->pass;
+	echo $objUser->pass.'<br>';
 	
 if($num==0) {
     echo 'Nic se nenactlo';
 }
 
-	if($objUser->nick != $nick || $objUser->pass != $pass) {
-		$_SESSION['logMsg'] .= 'Wrong user or password<br>';
+	if($objUser->nick == $nick && $objUser->pass == $pass) {
+		$_SESSION['logMsg'] .= 'it could be right<br>';
 		//header('Location: index.php');
 	} else {
-		$_SESSION['User'] = serialize($objUser);
+		$_SESSION['logMsg'] .= 'it wrong<br>';
+		//$_SESSION['User'] = serialize($objUser);
 		//header('Location: index.php');
 	}
 	
