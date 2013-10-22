@@ -10,7 +10,7 @@
 				Path<br>
 				<input type="text" name="view"><br>
 				Description<br>
-				<input type="textarea" name="desc"><br>
+				<input type="text" name="desc"><br>
 				<input type="submit" value="Create">
 			</form>
 		';
