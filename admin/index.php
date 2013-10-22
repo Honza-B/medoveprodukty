@@ -41,7 +41,13 @@
 				<td>'.$data->title.'</td>
 				<td>'.$data->path.'</td>
 				<td>'.$data->description.'</td>
-				<td><button to-id="'.$data->id.'" value="edit"><button to-id="'.$data->id.'" value="delete"></td>
+				<td><form action="update.php">
+						<input type="submit" value="Edit" name="'.$data->id.'">
+					</form>
+					<form action="delete.php">
+						<input type="submit" value="Edit" name="'.$data->id.'">
+					</form>
+				</td>
 			</tr>
 			';
 	}
