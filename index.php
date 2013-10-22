@@ -21,7 +21,7 @@
     </div>
     <div id="slider">
     	<div id="prev">
-    		<img src="img/prev-arrown.png" title="Předchozí" class="arrow" />
+    		<img src="img/prev-arrow.png" title="Předchozí" class="arrow" />
     	</div>
     	<div id="item-list">
     	<?php
@@ -35,7 +35,7 @@
         ?>
         </div>
         <div id="next">
-        	<img src="img/next-arrown.png" title="Další" class="arrow" />
+        	<img src="img/next-arrow.png" title="Další" class="arrow" />
         </div>
     </div>
     <div id="foo-link"><a href="admin/index.php">Login</a></div>
