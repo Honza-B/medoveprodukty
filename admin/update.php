@@ -19,14 +19,14 @@
 		}
 		
 		echo '
-			<form action="create_edit.php" method="post">
+			<form action="update_edit.php?id="'.$id.'" method="post">
 				Title<br>
 				<input type="text" name="title" value="'.$objProduct->title.'"><br>
 				Path<br>
 				<input type="text" name="view" value="'.$objProduct->path.'"><br>
 				Description<br>
 				<input type="text" name="desc" value="'.$objProduct->description.'"><br>
-				<input type="submit" value="Create">
+				<input type="submit" value="Update">
 			</form>
 		';
 	}
