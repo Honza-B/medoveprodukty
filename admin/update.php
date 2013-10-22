@@ -19,7 +19,7 @@
 		}
 		
 		echo '
-			<form action="update_edit.php?id="'.$id.'" method="post">
+			<form action="update_edit.php?id='.$id.'" method="post">
 				Title<br>
 				<input type="text" name="title" value="'.$objProduct->title.'"><br>
 				Path<br>
