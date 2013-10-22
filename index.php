@@ -12,12 +12,11 @@
 ?>
 <div id="wireframe">
     <div id="view">
-        <div id="title">Lipový med</div>
+        <div id="title"></div>
         <div id="image">
             <img src="" / class="view">
         </div>
         <div id="description">
-            <p>Lipový med, sttáčený v půli července, patří mezi nejaromatičtější medy.</p>
         </div>
     </div>
     <div id="slider">
@@ -37,8 +36,12 @@
 <script>
 	$(document).ready(function(){
 		$('.carousel').click(function(){
+			var title = $(this).attr('title');
 			var path = $(this).attr('src');
+			var description = $(this).attr('description');
 			$('.view').attr('src',path);
+			$('#title').text(title);
+			$('#description').text(description);
 		});
 	});
 </script>
