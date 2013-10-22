@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/main.css">
 <?php
 session_start();
 if(isset($_SESSION["User"])) {
@@ -9,7 +10,7 @@ if(isset($_SESSION["User"])) {
 	echo 'I fetched '. pg_num_rows($objProduct);
 	
 	echo '
-	<table>
+	<table class="product-list">
 		<tr>
 			<td>ID</td>
 			<td>Název</td>

@@ -1,7 +1,4 @@
-<style type="text/css">
-    #wireframe {width: 810px;}
-    #foo-link {width: 100%; text-align: right;}
-</style>
+<link rel="stylesheet" href="css/main.css">
 <div id="wireframe">
     <div id="view">
         <div id="title">Lipový med</div>

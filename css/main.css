@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+
+.product-list tr:nth-child(even) {
+	background: #CCC;
+}
+
+.product-list tr:nth-child(odd) {
+	background: #FFF;
+}
+
+#wireframe {
+	width: 810px;
+}
+
+#foo-link {
+	width: 100%;
+	text-align: right;
+}
