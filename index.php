@@ -38,7 +38,7 @@
 	$(document).ready(function(){
 		$('.carousel').click(function(){
 			var path = $(this).attr('src');
-			$('view').attr('src',path);
+			$('.view').attr('src',path);
 		});
 	});
 </script>
