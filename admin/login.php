@@ -14,11 +14,10 @@ if(!$dbconn) {
 
 	if($objUser->nick != $nick || $objUser->pass != $pass) {
 		echo 'Wrong user or password';
-	}
+	} else {
 		$_SESSION['User'] = serialize($objUser);
-if(isset($_SESSION["User"])) {
-	echo 'nekdo je prihlasen';
-}
-		// header("Location: http://medoveprodukty.herokuapp.com/admin/index.php");
+	}
+	
+	header("Location: http://medoveprodukty.herokuapp.com/admin/index.php");
 }
 ?>
