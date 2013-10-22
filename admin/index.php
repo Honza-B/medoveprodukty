@@ -43,10 +43,10 @@
 				<td>'.$data->description.'</td>
 				<td><div class="tools">
 						<a href="update.php?id='.$data->id.'">
-							<img src="edit.png" alt="Edit" />
+							<img src="../img/edit.png" alt="Edit" />
 						</a>
 						<a href="delete.php?id='.$data->id.'">
-							<img src="delete.png" alt="Delete" />
+							<img src="../img/delete.png" alt="Delete" />
 						</a>
 					</div>
 				</td>
