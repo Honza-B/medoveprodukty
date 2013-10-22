@@ -2,12 +2,12 @@
 <link rel="stylesheet" href="css/main.css">
 <div id="wireframe">
     <div id="view">
-        <div id="title">Lipovı med</div>
+        <div id="title">LipovÃ½ med</div>
         <div id="image">
             <img src="" />
         </div>
         <div id="description">
-            <p>Liovı med, stáèenı v pùli èervence patøí mezi nejaromatiètìjší medy.</p>
+            <p>LipovÃ½ med, sttÃ¡ÄenÃ½ v pÅ¯li Äervence, patÅ™Ã­ mezi nejaromatiÄtÄ›jÅ¡Ã­ medy.</p>
         </div>
     </div>
     <div id="slider">
