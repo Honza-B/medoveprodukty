@@ -54,6 +54,11 @@
 			';
 	}
 	
-	echo '</table>';
+	echo '
+		</table>
+		<form action="logout.php" method="post">
+			<input type="submit" value="Create product">
+		</form>
+	';
 }
 ?>
