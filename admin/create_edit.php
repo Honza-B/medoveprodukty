@@ -12,6 +12,10 @@
 		$title = pg_escape_string($_POST["title"]);
 		$view = pg_escape_string($_POST["view"]);
 		$desc = pg_escape_string($_POST["desc"]);
+		
+		echo $title.'<br>';
+		echo $view.'<br>';
+		echo $desc.'<br>';
 
 		$insert = pg_query($dbconn,"INSERT INTO product (title, path, description) VALUES('$title','$view','$desc')");
 		if(!$insert) {
