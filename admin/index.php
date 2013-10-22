@@ -18,7 +18,8 @@ if(isset($_SESSION["User"])) {
 			<td></td>
 		</tr>
 	';
-
+	
+	$i=0;
 	while($i<pg_num_rows($objProduct)) {
 		$objProduct = pg_fetch_object($objProduct,$i);
 		echo $objProduct->id.'<br>';
