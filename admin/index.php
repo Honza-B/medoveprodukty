@@ -1,9 +1,9 @@
 <?php
 session_start();
-if(isset($_SESSION['User'])) {
-	echo $_SESSION['logMsg'];
+if(isset($_SESSION["User"])) {
+	echo $_SESSION["logMsg"];
 } else {
-	echo $_SESSION['logMsg'];
+	echo $_SESSION["logMsg"];
 	echo '
 		<form action="login.php" method="post">
 			User<br>
