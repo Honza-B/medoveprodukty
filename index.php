@@ -20,7 +20,9 @@
         </div>
     </div>
     <div id="slider">
-    	<div id="prev"></div>
+    	<div id="prev">
+    		<img src="img/prev-arrown.png" title="Předchozí" class="arrow" />
+    	</div>
     	<div id="item-list">
     	<?php
     	while($data = pg_fetch_object($objProduct)) {
@@ -32,7 +34,9 @@
     	}
         ?>
         </div>
-        <div id="next"></div>
+        <div id="next">
+        	<img src="img/next-arrown.png" title="Další" class="arrow" />
+        </div>
     </div>
     <div id="foo-link"><a href="admin/index.php">Login</a></div>
 </div>

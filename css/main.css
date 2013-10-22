@@ -53,6 +53,10 @@ table.product-list tr:nth-child(odd) {
 	height: 60px;
 }
 
+.arrow {
+	height: 60px;
+}
+
 #foo-link a,
 #foo-link a:visited,
 #foo-link a:active,
