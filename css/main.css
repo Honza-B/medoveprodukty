@@ -1,10 +1,9 @@
 @CHARSET "UTF-8";
-
-.product-list table tr:nth-child(even) {
+table.product-list tr:nth-child(even) {
 	background: #CCC;
 }
 
-.product-list table tr:nth-child(odd) {
+table.product-list tr:nth-child(odd) {
 	background: #FFF;
 }
 
