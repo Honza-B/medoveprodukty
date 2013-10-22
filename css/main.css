@@ -48,7 +48,7 @@ table.product-list tr:nth-child(odd) {
 	padding-right: 10px;
 }
 
-#prev, #next {
+#prev, #next, #item-list {
 	display: inline;
 }
 
