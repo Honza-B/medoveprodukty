@@ -55,7 +55,7 @@ table.product-list tr:nth-child(odd) {
 }
 
 #next:hover, #prev:hover {
-	background: #AAD;
+	background: #88F;
 }
 
 .carousel {
