@@ -9,14 +9,14 @@ $pass = sha1($_POST["pass"]);
 if(!$dbconn) {
 	echo 'Not connected to database';
 } else {
-	$user = pg_query($dbconn, "SELECT * FROM users WHERE nick='$nick' and pass='$pass'");
-	$user = pg_fetch_object($user);
+	$objUser = pg_query($dbconn, "SELECT * FROM users");
+	$objUser = pg_fetch_object($objUser);
 
-	if($user->nick != $nick || $user->pass != $pass) {
+	if($objUser->nick != $nick || $objUser->pass != $pass) {
 		echo 'Wrong user or password';
+	} else {
+		$_SESSION['User'] = serialize($objUser);
+		header("Location: http://medoveprodukty.herokuapp.com/admin/index.php");
 	}
-	
-	$_SESSION['User'] = serialize($user);
-	header("Location: http://medoveprodukty.herokuapp.com/admin/index.php");
 }
 ?>
