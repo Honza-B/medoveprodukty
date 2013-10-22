@@ -27,8 +27,8 @@
 	<table class="product-list">
 		<tr>
 			<td>ID</td>
-			<td>Název</td>
-			<td>Náhled</td>
+			<td>NÃ¡zev</td>
+			<td>NÃ¡hled</td>
 			<td>Popis</td>
 			<td></td>
 		</tr>
