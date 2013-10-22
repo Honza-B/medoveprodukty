@@ -21,11 +21,11 @@
 		echo '
 			<form action="update_edit.php?id='.$id.'" method="post">
 				Title<br>
-				<input type="text" name="title" value="'.$objProduct->title.'"><br>
+				<input type="text" name="title" value="'.trim($objProduct->title).'"><br>
 				Path<br>
-				<input type="text" name="view" value="'.$objProduct->path.'"><br>
+				<input type="text" name="view" value="'.trim($objProduct->path).'"><br>
 				Description<br>
-				<input type="text" name="desc" value="'.$objProduct->description.'"><br>
+				<input type="text" name="desc" value="'.trim($objProduct->description).'"><br>
 				<input type="submit" value="Update">
 			</form>
 		';
