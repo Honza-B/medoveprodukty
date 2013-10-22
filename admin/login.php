@@ -12,28 +12,17 @@ if(!$dbconn) {
 	$num = pg_num_rows($objUser);
 	$objUser = pg_fetch_object($objUser);
 	
-	$dbnick = trim($objUser->nick);
-	$dbpass = trim($objUser->pass);
-	//$dbnick = substr($dbnick, 0, -1);
-	//$dbpass = substr($dbpass, 0, -1);
-	
-	echo $nick.'<br>';
-	echo $pass.'<br><br>';
-	
-	echo $dbnick;
-	echo '<br>';
-	echo $dbpass;
-	
-if($num==0) {
-    echo 'Nic se nenactlo';
-}
+	if($num==0) {
+	    echo 'Nic se nenactlo';
+	}
 
 	if(trim($objUser->nick) == $nick && trim($objUser->pass) == $pass) {
 		$_SESSION['logMsg'] .= 'it could be right<br>';
-		//header('Location: index.php');
+		$_SESSION['User'] = serialize($objUser);
+		header('Location: index.php');
 	} else {
 		$_SESSION['logMsg'] .= 'it wrong<br>';
-		//$_SESSION['User'] = serialize($objUser);
+		//
 		//header('Location: index.php');
 	}
 	
