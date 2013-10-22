@@ -13,7 +13,7 @@ if(!$dbconn) {
 	$objUser = pg_fetch_object($objUser);
 	
 	if($num==0) {
-	    echo 'Nic se nenactlo';
+	    echo 'Nic se nenacetlo';
 	}
 
 	if(trim($objUser->nick) == $nick && trim($objUser->pass) == $pass) {
@@ -25,7 +25,5 @@ if(!$dbconn) {
 		//
 		//header('Location: index.php');
 	}
-	
-	echo $_SESSION['logMsg'];
 }
 ?>
