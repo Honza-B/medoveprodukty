@@ -8,6 +8,7 @@ table.product-list tr:nth-child(odd) {
 }
 
 #wireframe {
+	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
 	width: 794px;
 	//border: 1px #DDD solid;
 }

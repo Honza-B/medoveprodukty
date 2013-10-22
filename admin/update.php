@@ -1,3 +1,4 @@
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
 <?php
 	session_start();
 	if(!isset($_SESSION["User"])) {
