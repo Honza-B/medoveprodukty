@@ -21,11 +21,14 @@ table.product-list tr:nth-child(odd) {
 	display: inline;
 }
 
+.item {
+	display: inline;
+	padding-right: 10px;
+}
+
 .carousel {
 	width: 60px;
 	height: 60px;
-	display: inline;
-	padding-right: 10px;
 }
 
 #foo-link a:visited,
