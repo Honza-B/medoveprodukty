@@ -20,6 +20,8 @@
         </div>
     </div>
     <div id="slider">
+    	<div id="prev"></div>
+    	<div id="item-list">
     	<?php
     	while($data = pg_fetch_object($objProduct)) {
     		echo '
@@ -29,6 +31,8 @@
     		';
     	}
         ?>
+        </div>
+        <div id="next"></div>
     </div>
     <div id="foo-link"><a href="admin/index.php">Login</a></div>
 </div>
