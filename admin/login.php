@@ -12,8 +12,8 @@ if(!$dbconn) {
 	$num = pg_num_rows($objUser);
 	$objUser = pg_fetch_object($objUser);
 	
-	$dbnick = substr($objUser->nick, 0, -1);
-	$dbpass = substr($objUser->pass, 0, -1);
+	$dbnick = $objUser->nick;
+	$dbpass = $objUser->pass;
 	
 	echo $nick.'<br>';
 	echo $pass.'<br><br>';
@@ -26,7 +26,7 @@ if($num==0) {
     echo 'Nic se nenactlo';
 }
 
-	if($objUser->nick == $nick && $objUser->pass == $pass) {
+	if($dbnick == $nick && $dbpass == $pass) {
 		$_SESSION['logMsg'] .= 'it could be right<br>';
 		//header('Location: index.php');
 	} else {
