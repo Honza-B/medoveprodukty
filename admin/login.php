@@ -14,6 +14,8 @@ if(!$dbconn) {
 	
 	$dbnick = $objUser->nick;
 	$dbpass = $objUser->pass;
+	$dbnick = substr($dbnick, 0, -1);
+	$dbpass = substr($dbpass, 0, -1);
 	
 	echo $nick.'<br>';
 	echo $pass.'<br><br>';
