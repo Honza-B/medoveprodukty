@@ -26,6 +26,7 @@ table.product-list tr:nth-child(odd) {
 
 #description {
 	margin-bottom: 20px;
+	font-size: normal;
 }
 
 #slider {
