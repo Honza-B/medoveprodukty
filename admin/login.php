@@ -15,8 +15,9 @@ if(!$dbconn) {
 	echo $nick.'<br>';
 	echo $pass.'<br><br>';
 	
-	echo $objUser->nick.'<br>';
-	echo $objUser->pass.'<br>';
+	echo $objUser->nick;
+	echo '<br>';
+	echo $objUser->pass;
 	
 if($num==0) {
     echo 'Nic se nenactlo';
