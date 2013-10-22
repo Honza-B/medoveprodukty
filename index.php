@@ -1,3 +1,4 @@
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
 <link rel="stylesheet" href="css/main.css">
 <div id="wireframe">
     <div id="view">
