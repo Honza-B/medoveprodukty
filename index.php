@@ -14,7 +14,7 @@
     <div id="view">
         <div id="title">Lipový med</div>
         <div id="image">
-            <img src="" />
+            <img src="" / class="view">
         </div>
         <div id="description">
             <p>Lipový med, sttáčený v půli července, patří mezi nejaromatičtější medy.</p>
@@ -33,3 +33,12 @@
     </div>
     <div id="foo-link"><a href="admin/index.php">Login</a></div>
 </div>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.carousel').click(function(){
+			var path = $(this).attr('src');
+			$('view').attr('src',path);
+		});
+	});
+</script>
