@@ -19,3 +19,7 @@ table.product-list tr:nth-child(odd) {
 .tools form {
 	display: inline;
 }
+
+.carousel {
+	width: 120px;
+}
