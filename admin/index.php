@@ -19,13 +19,11 @@ if(isset($_SESSION["User"])) {
 		</tr>
 	';
 	
-	$i=0;
-	while($i<pg_num_rows($objProduct)) {
-		$objProduct = pg_fetch_object($objProduct,$i);
-		echo $objProduct->id.'<br>';
-		echo $objProduct->title.'<br>';
-		echo $objProduct->path.'<br>';
-		echo $objProduct->description.'<br><br>';
+	while($data = pg_fetch_object($objProduct)) {
+		echo $data->id.'<br>';
+		echo $data->title.'<br>';
+		echo $data->path.'<br>';
+		echo $data->description.'<br><br>';
 	}
 	
 	echo '</table>';
