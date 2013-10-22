@@ -15,8 +15,8 @@
 		$delte = pg_query($dbconn,"DELETE FROM product WHERE id='$id'");
 		if(!$delete) {
 			echo pg_last_error();
-		} else {
-			header('Location: index.php');
 		}
+		
+		header('Location: index.php');
 	}
 ?>
