@@ -1,6 +1,7 @@
 <?php
-if(isset($_SESSION["User"])) {
-	echo 'nekdo je prihlasen';
+session_start();
+if(isset($_SESSION['User'])) {
+	echo $_SESSION['logMsg'];
 } else {
 	echo '
 		<form action="login.php" method="post">
