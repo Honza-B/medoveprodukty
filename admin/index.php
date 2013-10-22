@@ -6,7 +6,7 @@ if(isset($_SESSION["User"])) {
 	$conn = pg_connect("host=ec2-54-225-102-116.compute-1.amazonaws.com port=5432 dbname=dqc3ovvf3iq5n user=zpypggkdwxounx password=mNNTRvw5iCagVG9UapUgzJmRze sslmode=require options='--client_encoding=UTF8'") or die('Could not connect: ' . pg_last_error());
 	$objProduct = pg_query($conn, "SELECT * FROM product");
 	
-	echo 'I fetched'. pg_num_rows($objProduct);
+	echo 'I fetched '. pg_num_rows($objProduct);
 	
 	echo '
 	<table>
@@ -20,15 +20,10 @@ if(isset($_SESSION["User"])) {
 	';
 
 	while($objProduct = pg_fetch_object($objProduct)) {
-		echo '
-			<tr>
-				<td>'.$objProduct->id.'</td>
-				<td>'.$objProduct->title.'</td>
-				<td>'.$objProduct->path.'</td>
-				<td>'.$objProduct->description.'</td>
-				<td><button to-id="'.$objProduct->id.'" value="edit"><button to-id="'.$objProduct->id.'" value="delete"></td>
-			</tr>
-			';
+		echo $objProduct->id.'<br>';
+		echo $objProduct->title.'<br>';
+		echo $objProduct->path.'<br>';
+		echo $objProduct->description.'<br><br>';
 	}
 	
 	echo '</table>';
