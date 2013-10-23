@@ -56,7 +56,7 @@ table.product-list tr:nth-child(odd) {
 .carousel, .selected {
 	width: 60px;
 	height: 60px;
-	display: inline;
+	display: inline-block;
 	margin-right: 10px;
 }
 
