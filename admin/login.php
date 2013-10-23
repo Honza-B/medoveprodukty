@@ -12,18 +12,14 @@ if(!$dbconn) {
 	$objUser = pg_query($dbconn, "SELECT * FROM users WHERE nick='$nick' and pass='$pass'");
 	$num = pg_num_rows($objUser);
 	$objUser = pg_fetch_object($objUser);
-	
-	if($num==0) {
-	    echo 'Nic se nenacetlo';
-	}
 
 	if(trim($objUser->nick) == $nick && trim($objUser->pass) == $pass) {
 		$_SESSION["User"] = serialize($objUser);
 		header('Location: index.php');
 	} else {
-		$_SESSION['logMsg'] .= 'it wrong<br>';
-		//
-		//header('Location: index.php');
+		$_SESSION['logMsg'] = 'Nesprávné jméno nebo heslo!<br>';
+		
+		header('Location: index.php');
 	}
 }
 ?>

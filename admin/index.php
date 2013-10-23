@@ -3,8 +3,7 @@
 <?php
 	session_start();
 	if(!isset($_SESSION["User"])) {
-		echo $_SESSION["logMsg"];
-		echo '
+		echo $_SESSION["logMsg"].'
 			<form action="login.php" method="post">
 				User<br>
 				<input type="text" name="user"><br>
