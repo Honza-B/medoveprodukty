@@ -16,7 +16,7 @@
 	} else {
 		echo '
 			<form action="create.php" method="post">
-				<input type="submit" value="Create product">
+				<input type="submit" value="Přidat produkt">
 			</form>
 		';
 	
@@ -43,10 +43,10 @@
 				<td>'.$data->description.'</td>
 				<td><div class="tools">
 						<a href="update.php?id='.$data->id.'">
-							<img src="../img/edit.png" title="Edit" />
+							<img src="../img/edit.png" title="Upravit" />
 						</a>
 						<a href="delete.php?id='.$data->id.'">
-							<img src="../img/delete.png" title="Delete" />
+							<img src="../img/delete.png" title="Smazat" />
 						</a>
 					</div>
 				</td>

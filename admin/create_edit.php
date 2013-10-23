@@ -10,7 +10,7 @@
 			echo 'Not connected to database';
 		}
 		
-		/* Heroku nejspis nepodporuje upload obrázku, ale asi by t melo vypadat nejak takto, dále nize */ 
+		/* Heroku nejspis nepodporuje upload obrázku, ale asi by t melo vypadat nejak takto, dále nize 
 		$file = $_FILES['file'];
 		$tmpfile = $file['tmp_name'];
 		
@@ -18,17 +18,17 @@
 			echo 'neni soubor';
 		} else {
 			$is_upload = move_uploaded_file($tmpfile, 'img/'.$file['name']);
-			$view = 'img/'.$file['name'];
+			$view = 'img/'.$file['name']; ulozeni cesty do databaze funguje
 			
-			/*if(!$is_upload) { 
+			if(!$is_upload) { //ale soubor se na Heroku nedostane - jedine rucne
 				echo 'neuspesny upload';
 			} else {
 				
-			}*/
-		}
+			}
+		}*/
 		
 		$title = pg_escape_string($_POST["title"]);
-		//$view = "img/" . $_FILES["file"]["name"];
+		$view = pg_escape_string($_POST["file"]);
 		$desc = pg_escape_string($_POST["desc"]);
 
 		$insert = pg_query($dbconn,"INSERT INTO product (title, path, description) VALUES('$title','$view','$desc')");
