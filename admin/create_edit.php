@@ -42,6 +42,7 @@
 		      move_uploaded_file($_FILES["file"]["tmp_name"],
 		      "img/" . $_FILES["file"]["name"]);
 		      echo "Stored in: " . "img/" . $_FILES["file"]["name"];
+		      $view = "img/" . $_FILES["file"]["name"];
 		      }
 		    }
 		  }
@@ -52,7 +53,7 @@
 		
 			
 		$title = pg_escape_string($_POST["title"]);
-		$view = "img/" . $_FILES["file"]["name"];
+		//$view = "img/" . $_FILES["file"]["name"];
 		$desc = pg_escape_string($_POST["desc"]);
 
 		$insert = pg_query($dbconn,"INSERT INTO product (title, path, description) VALUES('$title','$view','$desc')");
@@ -60,6 +61,6 @@
 			echo pg_last_error();
 		}
 		
-		header('Location: index.php');
+		//header('Location: index.php');
 	}
 ?>
