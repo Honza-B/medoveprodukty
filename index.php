@@ -58,22 +58,22 @@
 			$('#item-list img').attr('class','carousel');
 			$('#item-list img').css('border','');
 			$sel.css('border','2px #66D solid');
-			/*var title = $('.selected').next().attr('title');
-			var path = $('.selected').next().attr('src');
-			var description = $('.selected').next().attr('description');
+			$sel.attr('class','selected');
+			var title = $('.selected').attr('title');
+			var path = $('.selected').attr('src');
+			var description = $('.selected').attr('description');
 			$('.view').attr('src',path);
 			$('#title').text(title);
-			$('#description').text(description);
-			$('.selected').next().attr('class','.carousel');*/			
+			$('#description').text(description);		
 		});
 		
-		$('.carousel').click(function(){
+		/*$('.carousel').click(function(){
 			var title = $(this).attr('title');
 			var path = $(this).attr('src');
 			var description = $(this).attr('description');
 			$('.view').attr('src',path);
 			$('#title').text(title);
 			$('#description').text(description);
-		});
+		});*/
 	});
 </script>
