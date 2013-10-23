@@ -10,8 +10,8 @@
 			echo 'Not connected to database';
 		}
 		
-		/* Heroku nejspis nepodporuje upload obrázku, ale asi by t melo vypadat nejak takto, dále nize
-		 * $file = $_FILES['file'];*/
+		/* Heroku nejspis nepodporuje upload obrázku, ale asi by t melo vypadat nejak takto, dále nize */ 
+		$file = $_FILES['file'];
 		$tmpfile = $file['tmp_name'];
 		
 		if(!$file or !is_uploaded_file($tmpfile)) {
