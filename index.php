@@ -28,7 +28,7 @@
     	$data = pg_fetch_object($objProduct,0);
     	echo '<img src="'.trim($data->path).'" title="'.trim($data->title).'" description="'.trim($data->description).'" class="selected">';
     	
-    	for($i=1;i<pg_num_rows($data);$i++) {
+    	for($i=1;$i<$num;$i++) {
     		$data = pg_fetch_object($objProduct,$i);
     		echo '<img src="'.trim($data->path).'" title="'.trim($data->title).'" description="'.trim($data->description).'" class="carousel">';
     	}
