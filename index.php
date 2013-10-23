@@ -43,9 +43,9 @@
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script>
 	$(document).ready(function(){
-		var title = $('.carousel:first-child').attr('title');
-		var path = $('.carousel:first-child').attr('src');
-		var description = $('.carousel:first-child').attr('description');
+		var title = $('.selected').attr('title');
+		var path = $('.selecte').attr('src');
+		var description = $('.selected').attr('description');
 		$('.view').attr('src',path);
 		$('#title').text(title);
 		$('#description').text(description);
