@@ -51,12 +51,13 @@
 		$('#description').text(description);
 
 		var $sel = $('.selected');
-		$sel.css('border','1px #66D solid');
+		$sel.css('border','2px #66D solid');
 
 		$('#next').click(function(){
 			$sel = $sel.next();
 			$('#item-list img').attr('class','carousel');
 			$('#item-list img').css('border','');
+			$sel.css('border','2px #66D solid');
 			/*var title = $('.selected').next().attr('title');
 			var path = $('.selected').next().attr('src');
 			var description = $('.selected').next().attr('description');

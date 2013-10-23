@@ -57,7 +57,7 @@ table.product-list tr:nth-child(odd) {
 	width: 60px;
 	height: 60px;
 	display: inline;
-	padding-right: 10px;
+	margin-right: 10px;
 }
 
 .arrow {
