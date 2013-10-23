@@ -55,7 +55,8 @@
 
 		$('#next').click(function(){
 			$sel = $sel.next();
-			$('#item-list img').attr('class','.carousel');
+			$('#item-list img').attr('class','carousel');
+			$('#item-list img').css('border','');
 			/*var title = $('.selected').next().attr('title');
 			var path = $('.selected').next().attr('src');
 			var description = $('.selected').next().attr('description');
