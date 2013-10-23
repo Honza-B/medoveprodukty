@@ -54,7 +54,9 @@
 		$sel.css('border','2px #66D solid');
 
 		$('#next').click(function(){
-			$sel = $sel.next();
+			if($sel.next().length > 0) {
+				$sel = $sel.next();
+			}
 			$('#item-list img').attr('class','carousel');
 			$('#item-list img').css('border','');
 			$sel.css('border','2px #66D solid');
@@ -68,7 +70,9 @@
 		});
 
 		$('#prev').click(function(){
-			$sel = $sel.prev();
+			if($sel.prev().length > 0) {
+				$sel = $sel.prev();
+			}
 			$('#item-list img').attr('class','carousel');
 			$('#item-list img').css('border','');
 			$sel.css('border','2px #66D solid');
