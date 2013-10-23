@@ -9,7 +9,7 @@
 				Title<br>
 				<input type="text" name="title"><br>
 				Path<br>
-				<input type="file" name="view"><br>
+				<input type="file" name="file"><br>
 				Description<br>
 				<input type="text" name="desc"><br>
 				<input type="submit" value="Create">

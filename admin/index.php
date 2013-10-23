@@ -56,8 +56,9 @@
 	
 	echo '
 		</table>
+		<br>
 		<form action="logout.php" method="post">
-			<input type="submit" value="Create product">
+			<input type="submit" value="Logout">
 		</form>
 	';
 }

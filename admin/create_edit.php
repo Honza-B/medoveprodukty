@@ -46,10 +46,9 @@
 		      }
 		    }
 		  }
-		else
-		  {
-		  echo "Invalid file";
-		  }
+		else {
+			echo "Invalid file";
+		}
 		
 			
 		$title = pg_escape_string($_POST["title"]);
