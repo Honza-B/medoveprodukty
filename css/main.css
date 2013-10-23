@@ -1,4 +1,8 @@
 @CHARSET "UTF-8";
+table.product-list tr:nth-child(1) {
+	background: #66D;
+}
+
 table.product-list tr:nth-child(even) {
 	background: #CCC;
 }
