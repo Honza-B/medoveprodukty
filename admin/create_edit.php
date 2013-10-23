@@ -10,47 +10,21 @@
 			echo 'Not connected to database';
 		}
 		
-		$allowedExts = array("gif", "jpeg", "jpg", "png");
-		$temp = explode(".", $_FILES["file"]["name"]);
-		$extension = end($temp);
-		if ((($_FILES["file"]["type"] == "image/gif")
-		|| ($_FILES["file"]["type"] == "image/jpeg")
-		|| ($_FILES["file"]["type"] == "image/jpg")
-		|| ($_FILES["file"]["type"] == "image/pjpeg")
-		|| ($_FILES["file"]["type"] == "image/x-png")
-		|| ($_FILES["file"]["type"] == "image/png"))
-		&& ($_FILES["file"]["size"] < 2000000)
-		&& in_array($extension, $allowedExts))
-		  {
-		  if ($_FILES["file"]["error"] > 0)
-		    {
-		    echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
-		    }
-		  else
-		    {
-		    echo "Upload: " . $_FILES["file"]["name"] . "<br>";
-		    echo "Type: " . $_FILES["file"]["type"] . "<br>";
-		    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
-		    echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
+		$file = $_FILES['file'];
+		$tmpfile = $file['tmp_name'];
 		
-		    if (file_exists("img/" . $_FILES["file"]["name"]))
-		      {
-		      echo $_FILES["file"]["name"] . " already exists. ";
-		      }
-		    else
-		      {
-		      move_uploaded_file($_FILES["file"]["tmp_name"],
-		      "img/" . $_FILES["file"]["name"]);
-		      echo "Stored in: " . "img/" . $_FILES["file"]["name"];
-		      $view = "img/" . $_FILES["file"]["name"];
-		      }
-		    }
-		  }
-		else {
-			echo "Invalid file";
+		if(!$file or !is_uploaded_file($tmpfile)) {
+			echo 'neni soubor';
+		} else {
+			$is_upload = move_uploaded_file($tmpfile, 'img/'.$file['name']);
+			
+			if(!$is_upload) {
+				echo 'neuspesny upload';
+			} else {
+				$view = 'img/'.$file['name'];
+			}
 		}
 		
-			
 		$title = pg_escape_string($_POST["title"]);
 		//$view = "img/" . $_FILES["file"]["name"];
 		$desc = pg_escape_string($_POST["desc"]);
