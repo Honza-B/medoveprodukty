@@ -6,12 +6,12 @@
 	} else {
 		echo '
 			<form action="create_edit.php" method="post" enctype="multipart/form-data">
-				Title<br>
+				Název<br>
 				<input type="text" name="title"><br>
 				Path<br>
-				<input type="file" name="file"><br>
-				Description<br>
-				<input type="text" name="desc"><br>
+				<input type="text" name="file"><br>
+				Popis<br>
+				<input type="textarea" name="desc"><br>
 				<input type="submit" value="Create">
 			</form>
 		';
