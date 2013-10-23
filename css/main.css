@@ -73,3 +73,11 @@ body {
 #foo-link a:hover {
 	color: #66D;
 }
+
+input {
+	border: 1px solid #66D;
+}
+
+table {
+	font-size: smaller;
+}
