@@ -50,15 +50,19 @@
 		$('#title').text(title);
 		$('#description').text(description);
 
+		var $sel = $('.selected');
+		$sel.css('border','1px #66D solid');
+
 		$('#next').click(function(){
-			$('.selected').prev().attr('class','.carousel');
-			var title = $('.selected').next().attr('title');
+			$sel = $sel.next();
+			$('#item-list img').attr('class','.carousel');
+			/*var title = $('.selected').next().attr('title');
 			var path = $('.selected').next().attr('src');
 			var description = $('.selected').next().attr('description');
 			$('.view').attr('src',path);
 			$('#title').text(title);
 			$('#description').text(description);
-			$('.selected').next().attr('class','.carousel');			
+			$('.selected').next().attr('class','.carousel');*/			
 		});
 		
 		$('.carousel').click(function(){
