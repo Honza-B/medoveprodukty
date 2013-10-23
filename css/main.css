@@ -45,12 +45,12 @@ table.product-list tr:nth-child(odd) {
 }
 
 #prev, #next, #item-list {
-	display: inline;
+	display: inline-block;
 	height: 60px;
 }
 
 #next:hover, #prev:hover {
-	background: #88F;
+	background: #BBF;
 }
 
 .carousel, .selected {
