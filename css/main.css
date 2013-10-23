@@ -26,7 +26,7 @@ table.product-list tr:nth-child(odd) {
 
 #description {
 	margin-bottom: 20px;
-	font-size: normal;
+	font-size: small;
 }
 
 #slider {
@@ -44,11 +44,6 @@ table.product-list tr:nth-child(odd) {
 	display: inline;
 }
 
-.item {
-	display: inline;
-	padding-right: 10px;
-}
-
 #prev, #next, #item-list {
 	display: inline;
 	height: 60px;
@@ -61,6 +56,8 @@ table.product-list tr:nth-child(odd) {
 .carousel {
 	width: 60px;
 	height: 60px;
+	display: inline;
+	padding-right: 10px;
 }
 
 .arrow {
