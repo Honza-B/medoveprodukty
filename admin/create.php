@@ -5,7 +5,7 @@
 		header('Location: index.php');
 	} else {
 		echo '
-			<form action="create_edit.php" method="post" encrypte="multipart/form-data">
+			<form action="create_edit.php" method="post" enctype="multipart/form-data">
 				Title<br>
 				<input type="text" name="title"><br>
 				Path<br>
