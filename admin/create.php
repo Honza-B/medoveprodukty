@@ -9,7 +9,7 @@
 				Název<br>
 				<input type="text" name="title"><br>
 				Path<br>
-				<input type="text" name="file"><br>
+				<input type="file" name="file"><br>
 				Popis<br>
 				<input type="textarea" name="desc"><br>
 				<input type="submit" value="Create">
