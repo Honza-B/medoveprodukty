@@ -43,8 +43,9 @@ body {
 	text-align: right;
 }
 
-.tools form {
+.tools a {
 	display: inline;
+	text-decoration: none;
 }
 
 #prev, #next, #item-list {
@@ -81,4 +82,8 @@ input {
 
 table {
 	font-size: small;
+}
+
+table td {
+	padding: 5px;
 }
