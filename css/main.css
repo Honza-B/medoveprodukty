@@ -78,6 +78,7 @@ body {
 input {
 	border: 1px solid #66D;
 	padding: 3px;
+	background: #fff;
 }
 
 table {
