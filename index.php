@@ -66,6 +66,20 @@
 			$('#title').text(title);
 			$('#description').text(description);		
 		});
+
+		$('#prev').click(function(){
+			$sel = $sel.prev();
+			$('#item-list img').attr('class','carousel');
+			$('#item-list img').css('border','');
+			$sel.css('border','2px #66D solid');
+			$sel.attr('class','selected');
+			var title = $('.selected').attr('title');
+			var path = $('.selected').attr('src');
+			var description = $('.selected').attr('description');
+			$('.view').attr('src',path);
+			$('#title').text(title);
+			$('#description').text(description);		
+		});
 		
 		/*$('.carousel').click(function(){
 			var title = $(this).attr('title');
