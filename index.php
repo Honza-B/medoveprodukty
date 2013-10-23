@@ -44,7 +44,7 @@
 <script>
 	$(document).ready(function(){
 		var title = $('.selected').attr('title');
-		var path = $('.selecte').attr('src');
+		var path = $('.selected').attr('src');
 		var description = $('.selected').attr('description');
 		$('.view').attr('src',path);
 		$('#title').text(title);
