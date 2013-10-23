@@ -51,12 +51,14 @@
 		$('#description').text(description);
 
 		$('#next').click(function(){
-			var title = $('.carousel:first-child').next().attr('title');
-			var path = $('.carousel:first-child').next().attr('src');
-			var description = $('.carousel:first-child').next().attr('description');
+			$('.selected').prev().attr('class','.carousel');
+			var title = $('.selected').next().attr('title');
+			var path = $('.selected').next().attr('src');
+			var description = $('.selected').next().attr('description');
 			$('.view').attr('src',path);
 			$('#title').text(title);
 			$('#description').text(description);
+			$('.selected').next().attr('class','.carousel');			
 		});
 		
 		$('.carousel').click(function(){
