@@ -51,7 +51,7 @@
 		$('#description').text(description);
 
 		var $sel = $('.selected');
-		$sel.css('border','2px #66D solid');
+		$sel.css('border','4px #66D solid');
 
 		$('#next').click(function(){
 			if($sel.next().length > 0) {
@@ -59,7 +59,7 @@
 			}
 			$('#item-list img').attr('class','carousel');
 			$('#item-list img').css('border','');
-			$sel.css('border','2px #66D solid');
+			$sel.css('border','4px #66D solid');
 			$sel.attr('class','selected');
 			var title = $('.selected').attr('title');
 			var path = $('.selected').attr('src');

@@ -5,11 +5,11 @@
 		header('Location: index.php');
 	} else {
 		echo '
-			<form action="create_edit.php" method="post">
+			<form action="create_edit.php" method="post" encrypte="multipart/form-data">
 				Title<br>
 				<input type="text" name="title"><br>
 				Path<br>
-				<input type="text" name="view"><br>
+				<input type="file" name="view"><br>
 				Description<br>
 				<input type="text" name="desc"><br>
 				<input type="submit" value="Create">
